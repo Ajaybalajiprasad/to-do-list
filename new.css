@@ -55,6 +55,7 @@ input{
 
 
 button{
+    display:flex;
     border: none;
     outline: none;
     padding: 16px 50px;
