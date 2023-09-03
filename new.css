@@ -58,7 +58,7 @@ button{
     display:flex;
     border: none;
     outline: none;
-    padding: 16px 50px;
+    padding: 16px 40px;
     background: rgba(255, 0, 0, 0.689);
     border-radius: 30px;
     color: white;
@@ -87,6 +87,10 @@ ul li::before{
     background-position: center;
     top: 12px;
     left: 8px;
+}
+ul li:hover::before{
+    border-radius: 50%;
+    border: 2px solid black;
 }
 ul li.checked{
     color: #737272;
