@@ -8,14 +8,13 @@ function Addtask(){
         let li = document.createElement("li");
         li.innerHTML = inputBox.value;
         listContainer.appendChild(li);
-        let span = document.createElement("span")
+        let span = document.createElement("span");
         span.innerHTML = "\u00d7";
         li.appendChild(span);
     }
     inputBox.value = "";
     saveData();
 }
-
 inputBox,addEventListener('keyup',function(e){
     if( e.key === 'Enter'){
         Addtask();
@@ -33,6 +32,11 @@ listContainer.addEventListener("click",function(e){
     }
 },false);
 
+listContainer.addEventListener('keyup',(e)=>{
+    if(e.key === 'Enter'){
+        Addtask();
+    }
+});
 function saveData(){
     localStorage.setItem("data",list.innerHTML);
 }
